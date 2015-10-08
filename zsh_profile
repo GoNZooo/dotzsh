@@ -1,0 +1,1 @@
+eval "$(/home/gonz/.rakudobrew/bin/rakudobrew init -)"
