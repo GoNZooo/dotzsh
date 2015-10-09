@@ -63,7 +63,7 @@ setopt APPEND_HISTORY
 plugins=(gitfast last-working-dir vi-mode ssh-agent)
 # User configuration
 
-export PATH="$HOME/.rakudobrew/moar-nom/install/share/perl6/site/bin:$HOME/.rakudobrew/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
+export PATH="$HOME/.rakudobrew/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -112,3 +112,5 @@ source $OPPDIR/*.zsh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias skype="xhost +local: && su skype -c skype"
+alias proper-youtube-dl="youtube-dl --restrict-filenames"
+alias fsnorm="mpv --fullscreen"
