@@ -116,4 +116,9 @@ alias proper-youtube-dl="youtube-dl --restrict-filenames"
 alias fsnorm="mpv --fullscreen"
 alias pwsafe=" pwsafe"
 
+alias omniknight-code="mosh omniknight mux start code"
+alias remote-omniknight-code="mosh remote-omniknight mux start code"
+alias omniknight-irc="mosh omniknight mux start irc"
+alias remote-omniknight-irc="mosh remote-omniknight mux start irc"
+
 source "$HOME/.secrets/envs.zsh"
