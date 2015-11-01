@@ -115,6 +115,7 @@ alias skype="xhost +local: && su skype -c skype"
 alias proper-youtube-dl="youtube-dl --restrict-filenames"
 alias fsnorm="mpv --fullscreen"
 alias pwsafe=" pwsafe"
+alias xracket="racket -il xrepl"
 
 alias omniknight-code="mosh omniknight mux start code"
 alias remote-omniknight-code="mosh remote-omniknight mux start code"
