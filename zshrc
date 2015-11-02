@@ -109,8 +109,6 @@ source $OPPDIR/*.zsh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias skype="xhost +local: && su skype -c skype"
 alias proper-youtube-dl="youtube-dl --restrict-filenames"
 alias fsnorm="mpv --fullscreen"
