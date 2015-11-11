@@ -114,6 +114,7 @@ alias proper-youtube-dl="youtube-dl --restrict-filenames"
 alias fsnorm="mpv --fullscreen --af=drc"
 alias pwsafe=" pwsafe"
 alias xracket="racket -il xrepl"
+alias tracket="racket -i -l xrepl -r typed/racket"
 
 alias omniknight-code="mosh omniknight mux start code"
 alias remote-omniknight-code="mosh remote-omniknight mux start code"
