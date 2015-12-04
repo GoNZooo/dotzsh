@@ -115,6 +115,7 @@ alias fsnorm="mpv --fullscreen --af=drc"
 alias pwsafe=" pwsafe"
 alias xracket="racket -il xrepl"
 alias tracket="racket -i -l xrepl -r typed/racket"
+alias emacs="emacs -nw"
 
 alias omniknight-code="mosh omniknight mux start code"
 alias remote-omniknight-code="mosh remote-omniknight mux start code"
