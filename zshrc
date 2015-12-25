@@ -121,5 +121,7 @@ alias omniknight-code="mosh omniknight mux start code"
 alias remote-omniknight-code="mosh remote-omniknight mux start code"
 alias omniknight-irc="mosh omniknight mux start irc"
 alias remote-omniknight-irc="mosh remote-omniknight mux start irc"
+alias omniknight-todo="mosh omniknight mux start todo"
+alias remote-omniknight-todo="mosh remote-omniknight mux start todo"
 
 source "$HOME/.secrets/envs.zsh"
