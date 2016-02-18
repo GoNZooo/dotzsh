@@ -115,7 +115,7 @@ alias fsnorm="mpv --fullscreen --af=drc"
 alias pwsafe=" pwsafe"
 alias xracket="racket -il xrepl"
 alias tracket="racket -i -l xrepl -r typed/racket"
-alias ec="emacs -nw"
+alias termemacs="emacs -nw"
 alias ec="emacsclient -t --alternate-editor=''"
 alias ed="emacs --daemon"
 
