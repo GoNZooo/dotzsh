@@ -111,7 +111,7 @@ source $OPPDIR/*.zsh
 # Example aliases
 alias skype="xhost +local: && su skype -c skype"
 alias proper-youtube-dl="youtube-dl --restrict-filenames --external-downloader=aria2c"
-alias fsnorm="mpv --fullscreen --af=drc"
+alias fsnorm="mpv --fullscreen --af=drc --ytdl-raw-options=external-downloader=aria2c"
 alias pwsafe=" pwsafe"
 alias xracket="racket -il xrepl"
 alias tracket="racket -i -l xrepl -r typed/racket"
