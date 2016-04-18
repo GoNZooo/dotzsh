@@ -118,6 +118,7 @@ alias tracket="racket -i -l xrepl -r typed/racket"
 alias termemacs="emacs -nw"
 alias ec="emacsclient -t --alternate-editor=''"
 alias ed="emacs --daemon"
+alias pedanticdialyzer="dialyzer -Wrace_conditions -Wunderspecs -Wunmatched_returns -Werror_handling"
 
 alias omniknight-code="mosh omniknight mux start code"
 alias remote-omniknight-code="mosh remote-omniknight mux start code"
