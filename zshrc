@@ -147,3 +147,5 @@ exenv() {
     esac
 }
 
+# gpg with ncurses pinentry in mutt
+export GPG_TTY=$(tty)
