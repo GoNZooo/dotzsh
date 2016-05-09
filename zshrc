@@ -84,7 +84,7 @@ OPPDIR="$HOME/code/thirdparty/opp.zsh"
 source $OPPDIR/opp.zsh
 source $OPPDIR/*.zsh
 
-. /etc/profile.d/fzf.zsh
+. /usr/share/fzf/key-bindings.zsh
 . /etc/profile.d/fzf-extras.zsh
 
 # You may need to manually set your language environment
@@ -110,12 +110,15 @@ source $OPPDIR/*.zsh
 #
 # Example aliases
 alias skype="xhost +local: && su skype -c skype"
-alias proper-youtube-dl="youtube-dl --restrict-filenames"
-alias fsnorm="mpv --fullscreen --af=drc"
+alias proper-youtube-dl="youtube-dl --restrict-filenames --external-downloader=aria2c"
+alias fsnorm="mpv --fullscreen --af=drc --ytdl-raw-options=external-downloader=aria2c"
 alias pwsafe=" pwsafe"
 alias xracket="racket -il xrepl"
 alias tracket="racket -i -l xrepl -r typed/racket"
-alias emacs="emacs -nw"
+alias termemacs="emacs -nw"
+alias ec="emacsclient -t --alternate-editor=''"
+alias ed="emacs --daemon"
+alias pedanticdialyzer="dialyzer -Wrace_conditions -Wunderspecs -Wunmatched_returns -Werror_handling"
 
 alias omniknight-code="mosh omniknight mux start code"
 alias remote-omniknight-code="mosh remote-omniknight mux start code"
@@ -125,3 +128,24 @@ alias omniknight-todo="mosh omniknight mux start todo"
 alias remote-omniknight-todo="mosh remote-omniknight mux start todo"
 
 source "$HOME/.secrets/envs.zsh"
+
+# Load exenv
+export PATH="/home/gonz/.exenv/shims:${PATH}"
+source "/home/gonz/tools/exenv/completions/exenv.zsh"
+exenv rehash 2>/dev/null
+exenv() {
+    local command="$1"
+    if [ "$#" -gt 0 ]; then
+        shift
+    fi
+
+    case "$command" in
+        shell)
+            eval `exenv "sh-$command" "$@"`;;
+        *)
+            command exenv "$command" "$@";;
+    esac
+}
+
+# gpg with ncurses pinentry in mutt
+export GPG_TTY=$(tty)
