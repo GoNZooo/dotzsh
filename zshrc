@@ -84,7 +84,7 @@ OPPDIR="$HOME/code/thirdparty/opp.zsh"
 source $OPPDIR/opp.zsh
 source $OPPDIR/*.zsh
 
-. /etc/profile.d/fzf.zsh
+. /usr/share/fzf/key-bindings.zsh
 . /etc/profile.d/fzf-extras.zsh
 
 # You may need to manually set your language environment
