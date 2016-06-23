@@ -60,7 +60,7 @@ setopt APPEND_HISTORY
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(gitfast last-working-dir vi-mode ssh-agent)
+plugins=(gitfast last-working-dir vi-mode)
 # User configuration
 
 export PATH="$HOME/.config/wifixir/script:$HOME/.config/pyfi/script:$HOME/.rakudobrew/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
