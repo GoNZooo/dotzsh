@@ -68,17 +68,6 @@ export PATH="$HOME/.config/wifixir/script:$HOME/.config/pyfi/script:$HOME/.rakud
 
 source $ZSH/oh-my-zsh.sh
 
-### Ideally all the below stuff would work, but opp.zsh has everything and it
-### does it well
-#autoload -Uz surround
-#zle -N delete-surround surround
-#zle -N add-surround surround
-#zle -N change-surround surround
-#bindkey -a cs change-surround
-#bindkey -a ds delete-surround
-#bindkey -a ys add-surround
-#bindkey -M visual S add-surround
-
 # opp.zsh (vim text-objects)
 OPPDIR="$HOME/code/thirdparty/opp.zsh"
 source $OPPDIR/opp.zsh
