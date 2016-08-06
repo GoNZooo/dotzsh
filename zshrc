@@ -129,23 +129,5 @@ alias remote-omniknight-todo="mosh remote-omniknight mux start todo"
 
 source "$HOME/.secrets/envs.zsh"
 
-# Load exenv
-export PATH="/home/gonz/.exenv/shims:${PATH}"
-source "/home/gonz/tools/exenv/completions/exenv.zsh"
-exenv rehash 2>/dev/null
-exenv() {
-    local command="$1"
-    if [ "$#" -gt 0 ]; then
-        shift
-    fi
-
-    case "$command" in
-        shell)
-            eval `exenv "sh-$command" "$@"`;;
-        *)
-            command exenv "$command" "$@";;
-    esac
-}
-
 # gpg with ncurses pinentry in mutt
 export GPG_TTY=$(tty)
