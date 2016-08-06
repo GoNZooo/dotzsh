@@ -1,2 +1,1 @@
 eval "$(/home/gonz/.rakudobrew/bin/rakudobrew init -)"
-bash /usr/bin/tdm
