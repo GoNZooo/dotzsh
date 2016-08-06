@@ -1,6 +1,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/home/gonz/.oh-my-zsh
 
+# keychain
+#eval `keychain --eval --agents ssh id_rsa`
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -60,24 +63,13 @@ setopt APPEND_HISTORY
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(gitfast last-working-dir vi-mode ssh-agent)
+plugins=(gitfast last-working-dir vi-mode)
 # User configuration
 
 export PATH="$HOME/.config/wifixir/script:$HOME/.config/pyfi/script:$HOME/.rakudobrew/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-
-### Ideally all the below stuff would work, but opp.zsh has everything and it
-### does it well
-#autoload -Uz surround
-#zle -N delete-surround surround
-#zle -N add-surround surround
-#zle -N change-surround surround
-#bindkey -a cs change-surround
-#bindkey -a ds delete-surround
-#bindkey -a ys add-surround
-#bindkey -M visual S add-surround
 
 # opp.zsh (vim text-objects)
 OPPDIR="$HOME/code/thirdparty/opp.zsh"
@@ -109,16 +101,11 @@ source $OPPDIR/*.zsh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias skype="xhost +local: && su skype -c skype"
 alias proper-youtube-dl="youtube-dl --restrict-filenames --external-downloader=aria2c"
 alias fsnorm="mpv --fullscreen --af=drc --ytdl-raw-options=external-downloader=aria2c"
-alias pwsafe=" pwsafe"
 alias xracket="racket -il xrepl"
 alias tracket="racket -i -l xrepl -r typed/racket"
 alias termemacs="emacs -nw"
-alias ec="emacsclient -t --alternate-editor=''"
-alias ed="emacs --daemon"
-alias pedanticdialyzer="dialyzer -Wrace_conditions -Wunderspecs -Wunmatched_returns -Werror_handling"
 
 alias omniknight-code="mosh omniknight mux start code"
 alias remote-omniknight-code="mosh remote-omniknight mux start code"
@@ -128,6 +115,3 @@ alias omniknight-todo="mosh omniknight mux start todo"
 alias remote-omniknight-todo="mosh remote-omniknight mux start todo"
 
 source "$HOME/.secrets/envs.zsh"
-
-# gpg with ncurses pinentry in mutt
-export GPG_TTY=$(tty)
