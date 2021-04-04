@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/gonz/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # keychain
 #eval `keychain --eval --agents ssh id_rsa`
