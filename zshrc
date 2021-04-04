@@ -113,3 +113,27 @@ alias omniknight-todo="mosh omniknight mux start todo"
 alias remote-omniknight-todo="mosh remote-omniknight mux start todo"
 
 source "$HOME/.secrets/envs.zsh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+. $HOME/tools/erlang/releases/22.3/activate
+# . /home/gonz/tools/erlang/releases/23.2/activate
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+eval "$(exenv init -)"
+
+# WSL?
+if [[ "$(< /proc/sys/kernel/osrelease)" == *microsoft* ]]; then
+    export $(dbus-launch)
+    export LIBGL_ALWAYS_INDIRECT=1
+    export WSL_VERSION=$(wsl.exe -l -v | grep -a '[*]' | sed 's/[^0-9]*//g')   
+    export WSL_HOST=$(tail -1 /etc/resolv.conf | cut -d' ' -f2)
+    export DISPLAY=$WSL_HOST:0
+    # pip path if using --user
+    # export PATH=$PATH:$HOME/.local/bin
+    # SSH
+    # eval $(/mnt/c/weasel-pageant/weasel-pageant -r)
+fi
