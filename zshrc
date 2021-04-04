@@ -101,11 +101,9 @@ source $OPPDIR/*.zsh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias proper-youtube-dl="youtube-dl --restrict-filenames --external-downloader=aria2c"
-alias fsnorm="mpv --fullscreen --af=drc --ytdl-raw-options=external-downloader=aria2c"
-alias xracket="racket -il xrepl"
-alias tracket="racket -i -l xrepl -r typed/racket"
-alias termemacs="emacs -nw"
+alias proper-youtube-dl="youtube-dl --restrict-filenames"
+alias ytdl="youtube-dl --restrict-filenames"
+alias code-without-accessibility="code --disable-renderer-accessibility"
 
 alias omniknight-code="mosh omniknight mux start code"
 alias remote-omniknight-code="mosh remote-omniknight mux start code"
