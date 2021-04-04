@@ -66,7 +66,18 @@ setopt APPEND_HISTORY
 plugins=(gitfast last-working-dir vi-mode ssh-agent)
 # User configuration
 
-export PATH="$HOME/.config/wifixir/script:$HOME/.config/pyfi/script:$HOME/.rakudobrew/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
+export GOPATH="$HOME/tools/go/go"
+
+export PYENV_ROOT="$HOME/.pyenv"
+
+export PATH="$HOME/tools/zig/zig-linux-x86_64-0.7.1+d20174ad8:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.exenv/bin:$HOME/tools/watchexec-1.12.0-x86_64-unknown-linux-gnu:$HOME/tools/ats/bin/bin:$HOME/.local/bin:$HOME/.yarn/bin:$HOME/.config/wifixir/script:$HOME/.config/pyfi/script:$HOME/.rakudobrew/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/bin:$PYENV_ROOT/bin:$PATH"
+
+export PATSHOME="$HOME/tools/ats/bin/lib/ats2-postiats-0.4.0"
+
+export PATH="$HOME/tools/go/go/bin:$PATH"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -76,18 +87,8 @@ OPPDIR="$HOME/code/thirdparty/opp.zsh"
 source $OPPDIR/opp.zsh
 source $OPPDIR/*.zsh
 
-. /usr/share/fzf/key-bindings.zsh
-. /etc/profile.d/fzf-extras.zsh
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
