@@ -132,6 +132,11 @@ if [[ "$(< /proc/sys/kernel/osrelease)" == *microsoft* ]]; then
     export WSL_VERSION=$(wsl.exe -l -v | grep -a '[*]' | sed 's/[^0-9]*//g')   
     export WSL_HOST=$(tail -1 /etc/resolv.conf | cut -d' ' -f2)
     export DISPLAY=$WSL_HOST:0
+    # Add Windows binaries to path. The reason we need this is because auto-injecting
+    # all paths into the WSL instance is slowing down ZSH considerably.
+    export PATH="/mnt/c/Users/ricka/AppData/Local/Programs/Microsoft VS Code/bin/:$PATH"
+    export PATH="/mnt/c/Windows/:$PATH"
+    export PATH="/mnt/c/Windows/System32:$PATH"
     # pip path if using --user
     # export PATH=$PATH:$HOME/.local/bin
     # SSH
